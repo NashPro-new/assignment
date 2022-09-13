@@ -97,6 +97,8 @@ for team in team2:
 
 
 losses={}
+tm = []
+total_pts = 0
 n = int(input('Enter consecutive losses or wins number:'))
 rep = str(input('Enter win or loss (w or l):'))
 for team_name, team_data in report.items():
@@ -104,7 +106,15 @@ for team_name, team_data in report.items():
     losses[team_name] = maxL.max_losses_wins(team_data[1], rep)
 for t_name,t_rep in losses.items():
     if t_rep >= n:
-        print(t_name)
+        tm.append(t_name)
+        total_pts += table[t_name][0]
+if len(tm) != 0:
+    avg_pts = total_pts/int(len(tm))
+    print('teams that won/lost: ', tm)
+    print(' with avg points: ', avg_pts)
+else:
+    print('no team won/lost these many matches consecutively')
+tm.clear()
 
 
 
