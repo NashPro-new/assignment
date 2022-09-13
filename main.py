@@ -94,18 +94,8 @@ for team in team2:
                     report[team] = []
                     report[team].append(pts[z])
                     report[team].append(mydict[i])
-rep_values = list(report.values())
-rep_keys = list(report.keys())
 
-#print(rep_values)
-#print(report)
 
-consecutive_l = []
-pos1 = 0
-max_l = 1
-flag = {}
-
-#print(report)
 losses={}
 n = int(input('Enter consecutive losses or wins number:'))
 rep = str(input('Enter win or loss (w or l):'))
