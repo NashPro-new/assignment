@@ -96,15 +96,15 @@ for team in team2:
                     report[team].append(mydict[i])
 
 
-losses={}
+teamm={}
 tm = []
 total_pts = 0
 n = int(input('Enter consecutive losses or wins number:'))
 rep = str(input('Enter win or loss (w or l):'))
 for team_name, team_data in report.items():
     #print(team_data[1])
-    losses[team_name] = maxL.max_losses_wins(team_data[1], rep)
-for t_name,t_rep in losses.items():
+    teamm[team_name] = maxL.max_losses_wins(team_data[1], rep)
+for t_name,t_rep in teamm.items():
     if t_rep >= n:
         tm.append(t_name)
         total_pts += table[t_name][0]
